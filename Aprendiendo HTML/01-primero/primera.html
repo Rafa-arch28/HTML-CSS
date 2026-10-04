@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI PRIMERA WEB</title>
+    <!-- Pequena introduccion a CSS -->
+    <style>
+        table, th, td {
+            border: 1px solid burlywood
+        }
+    </style>
+</head>
+<body>
+    <h1>Hola mundo</h1>
+    <p>Este es mi primer documento HTML</p>
+    <hr>
+
+    <h2>LISTAS</h2>
+    <!-- ul es una lista no ordenada -->
+    <ul>
+        <li> Elemento 1</li>
+        <li> Elemento 2</li>
+        <li> Elemento 3</li>
+        <li> Elemento 4</li>
+    </ul>
+
+    <!-- ol es una lista ordenada-->
+    <ol>
+        <!-- Puedes cambiar el valor con el que cambia poniendo un value en li-->
+        <li value="67"> Elemento 1</li>
+        <li> Elemento 2</li>
+        <li> Elemento 3</li>
+        <li> Elemento 4</li>
+        <!-- Anidar listas -->
+        <li>
+            <ol>
+                <!-- Para cambiar las vinetas -->
+                <li style="list-style-type: lower-alpha;">sub elemento 1</li>
+                <li style="list-style-type: lower-alpha;">sub elemento 2</li>
+                <li style="list-style-type: lower-alpha;">sub elemento 3</li>
+                <li style="list-style-type: lower-alpha;">sub elemento 4</li>
+            </ol>
+        </li>
+    </ol>
+    <hr>
+
+    <h2>TABLAS</h2>
+    <table style="width: 500px;">
+        <!-- Table head agrupa todos los titulos de la tabla, se usa para poner tableheaders(th)-->
+        <thead>
+            <!--tr es tablerow, crea una nueva linea-->
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+        </thead>
+        <!-- Table body es para todo el cuerpo de la tabla, se usa para poner td-->
+        <tbody>
+            <tr>
+                <td>Lechonk</td>
+                <td>de la fuente</td>
+            </tr>
+            <tr>
+                <td>Lechonkcito</td>
+                <td>de la caca</td>
+            </tr>
+            <tr>
+                <td>MEGA LECHONKKKK</td>
+                <td>DE LA FUENTEEEEEEE</td>
+            </tr>
+        </tbody>
+        <!--Este es el pie de la tabla, va siempre hasta el final-->
+        <tfoot>
+            <td>el ultimo lechonk del pie: </td>
+            <td>LECHONK PRO 12345</td>
+        </tfoot>
+    </table>
+    <hr>
+
+    <!-- Comentario -->
+    <p>
+        Este texto es un poco mas largo <span style="color: red;">y tiene un color diferente</span>
+        <br>para mostrar como se puede cambiar el color de un texto dentro de un párrafo.
+    </p>
+    <h2>URL hacia google</h2>
+    <a target="_blank" href="https://www.google.com.mx"> ir a google! </a>
+    <!-- Con a podemos abrir enlaces en una nueva pestaña si usamos _blank en target -->
+    <br>
+    <img src="images/image.png" width="300"/>
+
+    <hr>
+    <h1>FORMULARIOS</h1>
+    <form action="/formulario" method="post">
+        <!-- 
+        get: Se ve todo en la URL
+        post: No se ve todo en la URL, pero se ven los datos si la inspeccionamos
+        -->
+        
+        <!-- Usa for para cunado el piquen al label se ponga en el campo de texto -->
+        <label for="nombre"> Nombre: </label>
+        <input type="text" id="nombre" name="nombre" placeholder="nombre"/>
+        <!-- Nunca se te puede olvidar el name, y el placeholder es para poner algo adentro de la caja -->
+        <br>
+        <label for="apellido">Apellido: </label>
+        <input type="text" id="apellido" name="nombre" placeholder="nombre"/>
+        <br>
+        <label for="comentario">Comentario: </label>
+        <br>
+        <textarea cols="50" rows="10" id="comentario" placeholder="ingrese comentario" name="comentario"></textarea>
+        <br>
+        <button type="submit">Boton para enviar</button>
+        <button type="reset">Boton para resetear a valores por defecto</button>
+        <br>
+        <!-- La ventaja de los button es que puedes poner mas etiquetas dentro de ellos-->
+        <button type="button"><img src="images/image.png" width="100"/><br>Boton que no hace nada</button>
+        <!-- <input type="submit"/> -->
+        <!-- El submit sirve para enviar toooodos los datos dentro de este form, se especifica a donde arriba -->
+    </form>
+
+</body>
+</html>
